@@ -1,10 +1,28 @@
+*{
+    box-sizing: border-box; /*Detta sätter en ram runt exakt hela sidan på 100% = sätt att skapa responsivitet*/
+}
+
+body{
+    background-color: #E9D9C1;
+}
+
+header{
+    width: 100%;
+}
+
 .header-content{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 2%;
+    align-items: center;
+}
+
+.header-content h1{
+    color: #7A8B5F;
+    font-size: 40px;
 }
 
 nav ul{
     display: flex;
-    gap: 60px;
+    gap: 40px;
 }
