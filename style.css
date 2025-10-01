@@ -1,61 +1,81 @@
-*{
-    box-sizing: border-box; /*Detta sätter en ram runt exakt hela sidan på 100% = sätt att skapa responsivitet*/
+/* Global */
+body {
+  background-color: #E9D9C1;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: #E9D9C1;
+/* Header */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #E9D9C1;
+  padding: 10px 5%;
+  box-sizing: border-box;
 }
 
-header{
-    width: 100%;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-content{
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    align-items: center;
+.header-content h1 {
+  color: #7A8B5F;
 }
 
-.header-content h1{
-    color: #7A8B5F;
-    font-size: 40px;
+nav ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
 }
 
-nav ul{
-    display: flex;
-    gap: 40px;
+.card {
+  display: flex;
+  flex-direction: column;   /* text överst, bild under */
+  width: 80%;
+  max-width: 320px;
+  height: 440px;            /* mobilvänlig höjd */
+  margin: 140px auto 20px;  /* lämnar plats för header */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  background: #BFA78A;
+  align-items: center;
 }
 
-.card{
-    display: flex;
-    max-width: 600px;
-    width: 100%;
-    max-height: 350px;
-    margin: 0 auto;
-    gap: 40px;
+/* Textdelen */
+.card-content {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.card-content h2{
+    color: #3A2F25;
+}
+
+.card-btn{
+    margin: 10px;
+    padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    border: none;
+    background-color: #E3D3B8;
+    color: #3A2F25;
+    font-weight: 700;
+    border: 3px solid #88A273;
+    transition: all 0.1s ease;
 }
 
-
-.card-content{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    text-align: center;
+.card-btn:active{
+    transform: scale(1.3);
+    border-width: 6px;
 }
-
-
-.card-image{
-    flex: 1;
-    overflow: hidden;
-}
-
 
 .card-image img{
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
