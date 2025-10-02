@@ -12,8 +12,8 @@ header {
   top: 0;
   left: 0;
   background: #E9D9C1;
-  padding: 10px 5%;
   box-sizing: border-box;
+  padding: 10px 5%;
 }
 
 .header-content {
@@ -26,6 +26,15 @@ header {
   color: #7A8B5F;
 }
 
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+
 .menu-btn{
     border: none;
     background: none;
@@ -34,18 +43,25 @@ header {
 
 nav{
     display: none;
+    position: absolute;
+    top: 100%;
+    padding-top: 0;
 }
 
 nav.open{
     display: block;
 }
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  padding: 0;
+nav ul{
   list-style: none;
+  text-align: center;
+  padding: 0;
 }
+
+nav ul li{
+ 
+}
+
 
 .card {
   display: flex;
