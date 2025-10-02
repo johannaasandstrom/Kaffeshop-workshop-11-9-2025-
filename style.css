@@ -30,7 +30,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     position: relative;
 }
 
@@ -45,7 +44,6 @@ nav{
     display: none;
     position: absolute;
     top: 100%;
-    padding-top: 0;
 }
 
 nav.open{
@@ -58,39 +56,40 @@ nav ul{
   padding: 0;
 }
 
-nav ul li{
- 
-}
-
-
 .card {
   display: flex;
   flex-direction: column;   /* text överst, bild under */
-  width: 80%;
+  justify-content: space-between;
+  width: 75%;
   max-width: 320px;
-  height: 440px;            /* mobilvänlig höjd */
+  height: auto;            /* mobilvänlig höjd */
   margin: 140px auto 20px;  /* lämnar plats för header */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   background: #BFA78A;
   align-items: center;
+  padding: 15px 10px;
 }
 
 /* Textdelen */
 .card-content {
-  padding: 10px 15px;
   text-align: center;
 }
 
 .card-content h2{
     color: #3A2F25;
+    font-size: 18px;
+}
+
+.card-content p{
+    font-size: 14px;
 }
 
 .card-btn{
-    margin: 10px;
-    padding: 10px 20px;
+    font-size: 14px;
+    margin: 8px 0 12px 0;
+    padding: 8px 16px;
     border-radius: 10px;
-    border: none;
     background-color: #E3D3B8;
     color: #3A2F25;
     font-weight: 700;
@@ -104,8 +103,8 @@ nav ul li{
 }
 
 .card-image img{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
 }
