@@ -26,6 +26,14 @@ header {
   color: #7A8B5F;
 }
 
+nav{
+    display: none;
+}
+
+nav.open{
+    display: block;
+}
+
 nav ul {
   display: flex;
   gap: 20px;
