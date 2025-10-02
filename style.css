@@ -26,6 +26,12 @@ header {
   color: #7A8B5F;
 }
 
+.menu-btn{
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
 nav{
     display: none;
 }
