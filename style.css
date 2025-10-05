@@ -56,19 +56,51 @@ nav ul{
   padding: 0;
 }
 
+.intro-text{
+    text-align: center;
+    padding: 120px 20px 40px;
+}
+
+.intro-text h2{
+    font-size: 28px;
+}
+
+.intro-text p{
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.intro-text::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 2px;
+  margin: 20px auto 0;
+  background-color: #7A8B5F;
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
 .card {
-  display: flex;
+  display: none;
   flex-direction: column;   /* text överst, bild under */
   justify-content: space-between;
   width: 75%;
   max-width: 320px;
   height: auto;            /* mobilvänlig höjd */
-  margin: 140px auto 20px;  /* lämnar plats för header */
+  margin: 20px auto 20px;  /* lämnar plats för header */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   background: #BFA78A;
   align-items: center;
   padding: 15px 10px;
+}
+
+.card.active{
+    display: flex;
 }
 
 /* Textdelen */
@@ -107,4 +139,16 @@ nav ul{
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.card-nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card-nav button{
+    background: none;
+    border: none;
 }
