@@ -1,6 +1,6 @@
 /* Global */
 body {
-  background-color: #E9D9C1;
+  background-color: #4B3621; /*#E9D9C1;*/
   margin: 0;
   padding: 0;
 }
@@ -11,7 +11,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  background: #E9D9C1;
+  background: #4B3621;
   box-sizing: border-box;
   padding: 10px 5%;
 }
@@ -23,7 +23,7 @@ header {
 }
 
 .header-content h1 {
-  color: #7A8B5F;
+  color: #C7D5A3; /*#7A8B5F;*/
 }
 
 .menu{
@@ -38,6 +38,7 @@ header {
     border: none;
     background: none;
     font-size: 20px;
+    color: #F5F5F5;
 }
 
 nav{
@@ -63,6 +64,8 @@ nav ul{
 
 .intro-text h2{
     font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    color: #E3D3B8;
 }
 
 .intro-text p{
@@ -71,6 +74,8 @@ nav ul{
     margin: 0 auto;
     font-style: italic;
     opacity: 0.8;
+    font-family: 'Merriweather', serif;
+    color: #F3E9DD;
 }
 
 .intro-text::after {
@@ -85,19 +90,27 @@ nav ul{
 }
 
 .card {
+     position: relative;
+     overflow: hidden;
   display: none;
   flex-direction: column;   /* text överst, bild under */
   justify-content: space-between;
   width: 75%;
   max-width: 320px;
   height: auto;            /* mobilvänlig höjd */
-  margin: 20px auto 20px;  /* lämnar plats för header */
+  margin: 40px auto;  /* lämnar plats för header */
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  background: #BFA78A;
+  /*background-color: #BFA78A;*/
+  background: linear-gradient(165deg, #e3d0aa 0%, #b38b64 50%, #7d5c3a 100%);
   align-items: center;
   padding: 15px 10px;
+  box-shadow:
+  0 20px 40px rgba(0, 0, 0, 0.45),   /* huvudskugga → svävande känsla */
+  -1px -1px 4px rgba(255, 255, 255, 0.1) inset;
+  font-family: 'Merriweather', serif;
 }
+
+
 
 .card.active{
     display: flex;
@@ -111,6 +124,7 @@ nav ul{
 .card-content h2{
     color: #3A2F25;
     font-size: 18px;
+    font-family: 'Playfair Display', serif;
 }
 
 .card-content p{
@@ -127,6 +141,7 @@ nav ul{
     font-weight: 700;
     border: 3px solid #88A273;
     transition: all 0.1s ease;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .card-btn:active{
@@ -139,6 +154,7 @@ nav ul{
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .card-nav{
