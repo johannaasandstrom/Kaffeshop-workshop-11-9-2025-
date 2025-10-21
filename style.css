@@ -50,8 +50,45 @@ nav ul{
     list-style: none; text-align: center; padding: 0; 
 } 
 
+.hero {
+  position: relative;
+  height: 80vh; /* Nästan hela höjden på skärmen */
+  background-image: url('https://plus.unsplash.com/premium_photo-1726880719346-f0507dd9c926?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc1fHxjb2ZmZWV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 120px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  z-index: 0;
+}
+
+.hero h2 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; /* större */
+  color: #F3E9DD;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    background: linear-gradient(45deg, #F3E9DD, #FFDCA6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .intro-text{ 
-    text-align: center; padding: 120px 20px 40px; 
+    text-align: center; 
+    padding: 70px 20px 70px; 
 } 
 
 .intro-text h2{ 
@@ -60,9 +97,14 @@ nav ul{
 } 
 
 .intro-text p{ 
-    font-size: 16px; max-width: 400px; 
+    font-size: 16px; 
+    width: 250px;
+    max-width: 300px; 
     margin: 0 auto; font-style: italic; opacity: 0.8; 
-    font-family: 'Merriweather', serif; color: #F3E9DD; 
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(45deg, #F3E9DD, #FFDCA6);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 } 
 
 .intro-text::before { 
@@ -79,13 +121,13 @@ nav ul{
 .intro-text::after { 
     content: ""; 
     display: block; 
-    width: 40%; /* lite kortare än ::before */
-    height: 2px; /* tunnare */
-    margin: 20px auto 0; /* lite luft ovanför */
-    border-radius: 2px; 
+    width: 40%; 
+   height: 2px; 
+   margin: 20px auto 0; 
+   border-radius: 2px; 
     background: linear-gradient(to right, #7A8B5F, #C7D5A3); 
-    opacity: 0.7; /* lite mer subtilt */
-} 
+    opacity: 0.7;
+}
 
 .card { 
     width: 80%; 
@@ -148,6 +190,56 @@ nav ul{
     box-shadow: 0 4px 12px rgba(0,0,0,0.25); backdrop-filter: blur(6px); } footer{ text-align: center; position: relative; padding: 20px 5%; box-sizing: border-box; color: #F3E9DD; min-height: 200px; /* större höjd så gradienten syns */ 
     background: linear-gradient(to bottom, #4B3621 0%, #7A5E3C 80%); 
 } 
+
+.coffee-story{
+    width: 100%;
+    text-align: center;
+    background: #E9D9C1;
+}
+
+.coffe-story-header{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.story-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.story-container img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: auto;
+}
+
+.story-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* tar upp vänstra halvan */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* centrerar text horisontellt */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+   background: rgba(170, 190, 150, 0.35); /* ljus, mild grön */
+   backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+
+
+    /* Text */
+    color: #3A2F25; /* mörk elegant text */
+}
 
 .footer-socialmedia svg{
     width: 30px; 
